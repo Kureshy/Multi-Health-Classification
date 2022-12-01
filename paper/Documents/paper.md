@@ -200,7 +200,7 @@ Here we use Breast Cancer Wisconsin (Diagnostic) Dataset. It provides rich featu
 
 Based on the dataset, we think it’s perfect to complete the analysis of these tumors using machine learning various classification algorithms.
 
-##Tidy the data
+## Tidy the data
 The dataset contains 569 records with 32 attributes.  These attributes’ name, non-null count, data type represented in the dataset are shown in the fig.
 
 We eliminate the  _worst features since these extreme features don’t represent a fair distribution of records. Also we also eliminate the _se features because they are similar to the _mean features while the _mean features are better to represent the records considering the size of the dataset. Additionally, we change the diagnosis feature from categorical[M, B] to numerical[1, 0] for easy processing later. Now data showing in the fig are neat and ready for further analysis.
@@ -311,4 +311,4 @@ Comparing all the models given their metrics, all the models performed somewhat 
 # References
 
 [Cardiovascular Disease Prediction Dataset](https://www.openml.org/search?type=data&status=active&id=43672)
-
+[Breast Cancer Prediction Dataset](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)
