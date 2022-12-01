@@ -190,23 +190,23 @@ For this task a SVC model was trained, to classify patient cases as having the T
 
 # Comparisons
 
-# Example Analysis
+## Example Analysis
 Here we use the **Breast Cancer Dataset** as an example to illustrate the process.
 
-- **Define the question**
+##Define the question
 Breast cancer is the most common cancer amongst women in the world. It accounts for 25% of all cancer cases, and affects millions of people each and every year. It starts when cells in the breast begin to grow out of control. These cells usually form tumors that can be seen via X-ray or felt as lumps in the breast area.  The key challenge against its detection is how to classify tumors into malignant (cancerous) or benign(non cancerous).
 
 Here we use Breast Cancer Wisconsin (Diagnostic) Dataset. It provides rich features describing tumors (radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, fractal dimension) from different angles(mean, standard deviation, and worst). Additionally it has preliminary diagnosis as M(alignant) or B(enign). So it’s adequate for modeling.
 
 Based on the dataset, we think it’s perfect to complete the analysis of these tumors using machine learning various classification algorithms.
 
-- **Tidy the data**
+##Tidy the data
 The dataset contains 569 records with 32 attributes.  These attributes’ name, non-null count, data type represented in the dataset are shown in the fig.
 
 We eliminate the  _worst features since these extreme features don’t represent a fair distribution of records. Also we also eliminate the _se features because they are similar to the _mean features while the _mean features are better to represent the records considering the size of the dataset. Additionally, we change the diagnosis feature from categorical[M, B] to numerical[1, 0] for easy processing later. Now data showing in the fig are neat and ready for further analysis.
 
 
-- **Explore the data**
+##Explore the data
 
 Now we have the mean features together with the diagonal feature for further analysis. We can take a closer look at these features as well as from a statistical point of view, showing in fig.
 
