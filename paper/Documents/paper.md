@@ -259,6 +259,7 @@ All models’ overall scores are pretty high: 93%--96% while there’s no champi
 
 ## The dataset is from kaggle. While:
 I use different models.
+
 I use all models in one shot so that it’s code-efficient and it’s easy for model comparison. 
 
 
