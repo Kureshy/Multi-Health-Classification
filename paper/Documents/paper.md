@@ -204,23 +204,38 @@ Based on the dataset, we think it’s perfect to complete the analysis of these 
 
 
 ## Tidy the data
-The dataset contains 569 records with 32 attributes.  These attributes’ name, non-null count, data type represented in the dataset are shown in the fig.
+The dataset contains 569 records with 32 attributes.  These attributes’ name, non-null count, data type represented in the dataset are shown in fig.
 
-We eliminate the  _worst features since these extreme features don’t represent a fair distribution of records. Also we also eliminate the _se features because they are similar to the _mean features while the _mean features are better to represent the records considering the size of the dataset. Additionally, we change the diagnosis feature from categorical[M, B] to numerical[1, 0] for easy processing later. Now data showing in the fig are neat and ready for further analysis.
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.info.png)
 
+
+We eliminate the  _worst features since these extreme features don’t represent a fair distribution of records. Also we also eliminate the _se features because they are similar to the _mean features while the _mean features are better to represent the records considering the size of the dataset. Additionally, we change the diagnosis feature from categorical[M, B] to numerical[1, 0] for easy processing later. Now data showing in fig are neat and ready for further analysis.
+
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.data_ready.png)
 
 ## Explore the data
 
 Now we have the mean features together with the diagonal feature for further analysis. We can take a closer look at these features as well as from a statistical point of view, showing in fig.
 
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.describe.png)
+
+
 A heatmap showing the correlation of the features with each other is shown in fig.  The image shows graphically how each feature correlates with each other feature. This analysis shows that the following features [‘radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean', 'concave points_mean', 'symmetry_mean', 'fractal_dimension_mean] are positively correlated with the target variable[diagnosis] , with[‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] showing the highest correlation.
+
+
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.heatmap.png)
 
 The above is proved by fig. showing indeed [‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] are major contributors to diagnosis.
 
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.major_contributors.png)
+
 Furthermore we understand the distribution of Malignant vs. Benign graphed in fig.
+
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.counts.png)
 
 Moreover we have an impression regarding both distribution of a single feature as well as its relationships with other features in fig.
 
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.pairplot.png)
 
 ## Use the models in one shot (RandomForestClassifier,  KNeighborsClassifier, GaussianNB,  SGDClassifier)
 10 data columns ending with _mean are selected as features, and the diagnosis column is selected as a label.
@@ -234,6 +249,9 @@ In one shot, multiple models (RandomForestClassifier, KNeighborsClassifier, Gaus
 
 ## Perform the analysis
 In one shot again, all models are evaluated using accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix. Please see fig & fig.
+
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.metrics1.png)
+![image](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.metrics2.png)
 
 
 ## Check results
