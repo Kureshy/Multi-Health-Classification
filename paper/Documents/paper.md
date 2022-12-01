@@ -188,9 +188,9 @@ For this task a SVC model was trained, to classify patient cases as having the T
 
 
 
-# Comparisons
 
-## Example Analysis
+
+# Example Analysis
 Here we use the **Breast Cancer Dataset** as an example to illustrate the process.
 
 ## Define the question
@@ -238,6 +238,9 @@ I use different models.
 I use all models in one shot so that it’s code-efficient and it’s easy for model comparison. 
 
 -------------------
+
+
+# Comparisons
 
 # Conclusions
 In this section we compile and compare the various Evaluation metrics of each and every model.
