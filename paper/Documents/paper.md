@@ -1,20 +1,19 @@
----
-title: Performance analysis of  Machine Learning Models trained on life threatening Diseases
-date: "November 2021"
-author: Waqas Kureshy, San José State University
+-----------
 
-header-includes: |
-  \usepackage{booktabs}
-  \usepackage{caption}
----
+Title: Performance analysis of  Machine Learning Models trained on life threatening Diseases<br>
+Date: "November 2021"<br>
+Author: Waqas Kureshy, Neeharika Yeluri, Jasmine Wang, San José State University<br>
+
+-------------------
+
 
 # Abstract
 
-Humans are plagued by different diseases globally, of these diseases CVD (Cardiovascular diseases), Diabetes and Breast Cancer are known to have a prolonged and detrimental  effect. Our task was to work on datasets related to the diseases mentioned above by employing different Machine Learning approaches, consolidate results and provide a comparison to the reader about the models used. For this exercise we used Sequential models, Decision tree Classifiers, Support Vector Machines, LogisticRegression, RandomForestClassifier, and KNeighborsClassifier. Techniques used and comparison for all the models made for each dataset in terms of metrics are presented in this paper.
+<div align="center">Humans are plagued by different diseases globally, of these diseases CVD (Cardiovascular diseases), Diabetes and Breast Cancer are known to have a prolonged and detrimental  effect. Our task was to work on datasets related to the diseases mentioned above by employing different Machine Learning approaches, consolidate results and provide a comparison to the reader about the models used. For this exercise we used Sequential models, Decision tree Classifiers, Support Vector Machines, LogisticRegression, RandomForestClassifier, and KNeighborsClassifier. Techniques used and comparison for all the models made for each dataset in terms of metrics are presented in this paper.</div>
 
 # Introduction
 
-Cardiovascular diseases, diabetes, and breast cancer are top 3 causes of death globally, taking millions of lives each year, which accounts for 50% of all deaths worldwide. It has long been the struggle of Researchers, Scientists and Doctors to come up with comprehensive statistical models to conclude positively the patient's medical ailments. This approach carries benefits for the Medical industry workers as well as the patient. Employing such models that have the ability to classify a patient’s health could serve as an early warning system, this enables the patient to get timely medical treatment and advice. This approach as well as proving valuable to a person's health can also potentially save time and effort  in the process of Medical diagnosis. Our objective for this project was to take three datasets pertaining to Cardiovascular diseases, Diabetes, as well as Breast Cancer, conduct initial exploratory analysis of the data, clean and preprocess the data and then to use this data to make different Machine Learning models, compile metrics and present an analysis of the performance of each model to the reader.
+<div align="center">Cardiovascular diseases, diabetes, and breast cancer are top 3 causes of death globally, taking millions of lives each year, which accounts for 50% of all deaths worldwide. It has long been the struggle of Researchers, Scientists and Doctors to come up with comprehensive statistical models to conclude positively the patient's medical ailments. This approach carries benefits for the Medical industry workers as well as the patient. Employing such models that have the ability to classify a patient’s health could serve as an early warning system, this enables the patient to get timely medical treatment and advice. This approach as well as proving valuable to a person's health can also potentially save time and effort  in the process of Medical diagnosis. Our objective for this project was to take three datasets pertaining to Cardiovascular diseases, Diabetes, as well as Breast Cancer, conduct initial exploratory analysis of the data, clean and preprocess the data and then to use this data to make different Machine Learning models, compile metrics and present an analysis of the performance of each model to the reader.</div>
 
 
 For this exercise we worked on three different datasets, feature and statistics of each dataset are elaborated as:
@@ -23,41 +22,52 @@ For this exercise we worked on three different datasets, feature and statistics 
 
 | Feature     | Data type     | value |
 | :-------------: | :-------------: |:-------------:|
-
-|Age            |       Integer    | Age of the patient  [years]|
-| Sex |Integer |    Sex of the patient [1: Male, 0: Female] |
-|Chest Pain Type |Integer |[1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain,4: Asymptomatic]|
-|Resting Blood Pressure| Integer| Resting blood pressure [mm Hg]|
-|Cholesterol| Integer| Serum cholesterol [mm/dl] |
-|Fasting Blood Sugar| Integer|[1: if FastingBS > 120 mg/dl, 0: otherwise]|
-|Resting ECG |Integer| Resting electrocardiogram results [0: Normal, 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), 2: showing probable or definite left ventricular hypertrophy by Estes criteria]|
-|Max Heart Rate| Integer| Maximum heart rate achieved [Numeric value between 60 and 202]|
-|Exercise Angina| Integer| Exercise-induced angina [1: Yes, 0: No] |
-|Old peak |Float | Oldpeak = ST [Numeric value measured in depression] |
-|ST Slope| Integer | The slope of the peak exercise ST segment [1: upsloping,  2: flat, 3: downsloping] |
-|Target| Integer |Output class [1: heart disease, 0: Normal] |
+|Age            |       Integer    | Age of the patient  [years] |
+| Sex | Integer |    Sex of the patient [1: Male, 0: Female] |
+| Chest Pain Type | Integer | [1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain,4: Asymptomatic] |
+| Resting Blood Pressure | Integer| Resting blood pressure [mm Hg] |
+| Cholesterol | Integer| Serum cholesterol [mm/dl] |
+| Fasting Blood Sugar| Integer | [1: if FastingBS > 120 mg/dl, 0: otherwise] |
+| Resting ECG | Integer | Resting electrocardiogram results [0: Normal, 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), 2: showing probable or definite left ventricular hypertrophy by Estes criteria]|
+| Max Heart Rate | Integer| Maximum heart rate achieved [Numeric value between 60 and 202] |
+| Exercise Angina | Integer | Exercise-induced angina [1: Yes, 0: No] |
+| Old peak | Float | Oldpeak = ST [Numeric value measured in depression] |
+| ST Slope | Integer | The slope of the peak exercise ST segment [1: upsloping,  2: flat, 3: downsloping] |
+| Target | Integer | Output class [1: heart disease, 0: Normal] |
 
 -----
 
-The Correlation of the dataset attributes with respect to the target variable i.e the possibility of having a CVD (Cardiovascular Disease) are depicted in the graph number_ below.<br>
-
+The Correlation of the dataset attributes with respect to the target variable i.e the possibility of having a CVD (Cardiovascular Disease) are depicted in the graph number below.<br>
+![image](https://user-images.githubusercontent.com/78277453/204978541-16bef032-5451-4fdc-b1df-927cd0e2b3aa.png)
 
 
 
 From this analysis it is evident that 9 different attributes/features have a positive correlation with the target variable.<br>
 
-A heatmap showing the correlation of the features with each other are shown in fig_ , this image shows graphically how each feature correlates with each other feature. This analysis shows that the following features are positively correlated with the target variable [Age , Sex , Chest pain Type ,  Resting Blood Pressure, Fasting Blood Sugar ,  Resting ECG ,  Exercise Angina , Old Peak , ST_Slope ]
+A heatmap showing the correlation of the features with each other are shown in fig-1 , this image shows graphically how each feature correlates with each other feature. This analysis shows that the following features are positively correlated with the target variable [Age , Sex , Chest pain Type ,  Resting Blood Pressure, Fasting Blood Sugar ,  Resting ECG ,  Exercise Angina , Old Peak , ST_Slope ]<br>
+
+![image](https://user-images.githubusercontent.com/78277453/204979205-70461ff2-5f1a-4c46-b7a6-cc50636c3ee1.png)
+
 With the attribute ST Slope (The ST segment encompasses the region between the end of ventricular depolarization and beginning of ventricular repolarization on the ECG ) showing the highest correlation.<br>
 
-The CVD dataset is composed of 1190 cases which is professionally compiled, by merging datasets from different origins and compilations presented in [] .The distribution of the dataset with respect to the target variable as shown in fig_shows that the dataset is balanced and is adequate for modeling. <br>
+The CVD dataset is composed of 1190 cases which is professionally compiled, by merging datasets from different origins and compilations presented in [1] .The distribution of the dataset with respect to the target variable as shown in fig-2 shows that the dataset is balanced and is adequate for modeling. <br>
+![image](https://user-images.githubusercontent.com/78277453/204979389-2d6bfd91-ff16-423f-b42c-1dbe9408450e.png)
 
-A graph plot shown in fig_ shows the distribution of the dataset with respect to the target variable differentiated on the basis of age (0: for no CVD disease and 1: for having a positive identification of CVD).<br>
 
-The following fig_ shows a  plot of  various types of chest pain encountered in the dataset separated by Gender, where 0 represents female cases and 1 represents male cases.<br>
+A graph plot shown in fig-3 shows the distribution of the dataset with respect to the target variable differentiated on the basis of age (0: for no CVD disease and 1: for having a positive identification of CVD).<br>
+![image](https://user-images.githubusercontent.com/78277453/204979557-03dcb5bd-ca07-4f62-b752-1e7cfa6680d7.png)
 
-The following fig_ shows a  plot of the distribution of Age across the Sex feature, it can be observed that males tend to contract Heart Diseases earlier than females. In the figure 0 represents female cases and 1 represents male cases.<br>
 
-The plot in fig_ shows interesting information about the trends of heart rate of people having CVD and not having CVD separated by Gender. It can be observed that Males who have suffered from CVD tend to have a lower Heart Beat rate than their female counterparts who also have CVDs.<br>
+The following fig-4 shows a  plot of  various types of chest pain encountered in the dataset separated by Gender, where 0 represents female cases and 1 represents male cases.<br>
+![image](https://user-images.githubusercontent.com/78277453/204979666-66957bed-bd98-4479-be46-74f2d4cc04a0.png)
+
+
+The following fig-5 shows a  plot of the distribution of Age across the Sex feature, it can be observed that males tend to contract Heart Diseases earlier than females. In the figure 0 represents female cases and 1 represents male cases.<br>
+![image](https://user-images.githubusercontent.com/78277453/204979958-47a643df-0002-4665-b1a3-a3c8f1d895b2.png)
+
+
+The plot in fig-6 shows interesting information about the trends of heart rate of people having CVD and not having CVD separated by Gender. It can be observed that Males who have suffered from CVD tend to have a lower Heart Beat rate than their female counterparts who also have CVDs.<br>
+![image](https://user-images.githubusercontent.com/78277453/204980080-a400ba38-4742-4917-b225-09ad3fe46a44.png)
 
 ## Diabetes
 Diabetes is a common chronic disease. Prediction of diabetes at an early stage can lead to improved treatment. The dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.
@@ -117,10 +127,15 @@ For this task a Artificial Neural Network model was trained, to classify patient
 - A Dropout layer  was used after every Dense layer to avoid overfitting.
 - A callback EarlyStopping which monitored the validation loss metric was also used to prevent overfitting.
 - The neural network was trained for 600 epochs , but the training was stopped at 85 epochs due to the early stop callback.
-- The model’s metrics showing the model’s Loss, Validation-Loss,Accuracy and Validation-Accuracy are shown in the fig_ below.
+- The model’s metrics showing the model’s Loss, Validation-Loss,Accuracy and Validation-Accuracy are shown in the fig-7 below.
+
+![image](https://user-images.githubusercontent.com/78277453/204981172-3f0473d3-f6c7-4eea-b023-88d9be20e2cf.png)
+
 
 The last recorded metrics are shown in table_ below.
-
+|loss| acuracy |val loss | val accuracy |
+|-----|----|------|---------------------|
+| 0.4256|0.8271|0.3684|  0.8431 |
 
 <br>
 
@@ -192,7 +207,8 @@ We eliminate the  _worst features since these extreme features don’t represent
 
 
 - **Explore the data**
-Now we have the _mean features together with the diagonal feature for further analysis. We can take a closer look at these features as well as from a statistical point of view, showing in fig.
+
+Now we have the mean features together with the diagonal feature for further analysis. We can take a closer look at these features as well as from a statistical point of view, showing in fig.
 
 A heatmap showing the correlation of the features with each other is shown in fig.  The image shows graphically how each feature correlates with each other feature. This analysis shows that the following features [‘radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean', 'concave points_mean', 'symmetry_mean', 'fractal_dimension_mean] are positively correlated with the target variable[diagnosis] , with[‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] showing the highest correlation.
 
@@ -229,45 +245,58 @@ Three models were created for the CVD dataset, as listed below:
 - CVD (Cardiovascular Disease) Classification using SVM
 - CVD (Cardiovascular Disease) Classification using Decision Trees
 
-The image of Confusion Matrix for each model is shown as below fig_:
+The image of Confusion Matrix for each model is shown as below :
 
+![image](https://user-images.githubusercontent.com/78277453/204982208-c2d2be67-f95d-45dc-81e5-8cd19946d9a7.png)
+<br>
+Confusion Matrix for ANN model
+<br>
+
+![image](https://user-images.githubusercontent.com/78277453/204982402-5cd0625d-341e-4482-9ca2-1c2fce2d2a79.png)
+<br>
+Confusion Matrix for SVM model
+<br>
+
+![image](https://user-images.githubusercontent.com/78277453/204982504-4d22e1aa-f17d-465b-8080-84eefd723b6a.png)
+<br>
+Confusion Matrix for Decision Tree Classifier
+<br>
 
 For easy comparison a table is shown below that compiles all the True Positive, False Positive, True Negative and False Negative values gathered from the confusion matrix for each model trained on the CVD dataset.
 
-Model name  TP  FP  FN  TN
-----------  --- --- --- ----
-SVM       41.46%  9.80% 5.04% 43.70%
-ANN       38.38%  8.68%  7% 45.94%
-Decision Tree 40.06%  7.56% 10.36%  42.02%
+| Model name | TP | FP | FN | TN |
+|---------- | --- | --- | ---| ----|
+| SVM       |41.46%  |9.80% |5.04% |43.70%|
+| ANN      | 38.38% | 8.68% | 7% | 45.94% |
+| Decision Tree | 40.06% | 7.56% | 10.36%  | 42.02% |
 
 The classification report for each model trained on the CVD dataset is shown in the table with its respective label below.
 
 
 
 
-      Precision   Recall    F-1
-----  ---------   --------- ----
-0     0.85      0.82        0.83
-1     0.84      0.87        0.85
-accuracy                    0.84
+|     | Precision|   Recall |   F-1|
+|----  | --------  | --------- | ---- |
+| 0    | 0.85 |     0.82    |    0.83 |
+| 1    | 0.84  |    0.87  |      0.85|
+|accuracy |    |          |     0.84 |
+
 Table: Classification Report for ANN model
 
-      Precision   Recall    F-1
-----  ---------   --------- ----
-0    0.85         0.82      0.83
+|    |  Precision |   Recall |   F-1 |
+| ---- | --------- |  --------- |---|
+|0 |    0.85 |    0.82 |     0.83 |
+|1 |    0.84 |       0.87 |      0.86 |
+|accuracy |             |       0.85 |
 
-
-1     0.84        0.87      0.86
-
-
-accuracy                    0.85
 Table: Classification Report Decision Tree model
 
-      Precision   Recall    F-1
-----  ---------   --------- ----
-0    0.89         0.81      0.85
-1     0.82        0.90        0.85
-accuracy                    0.85
+|      |Precision  | Recall  |  F-1 |
+| ----  |---------  |  ---------| ---- |
+|0  |  0.89 |         0.81  |    0.85 |
+| 1  |   0.82 |       0.90  |      0.85 |
+|accuracy |    |            |    0.85   |
+
 Table: Classification Report for SVM model
 
 
