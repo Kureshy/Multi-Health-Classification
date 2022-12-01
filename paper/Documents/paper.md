@@ -188,10 +188,12 @@ For this task a SVC model was trained, to classify patient cases as having the T
 
 
 
+-------------------
 
 
 # Example Analysis
 Here we use the **Breast Cancer Dataset** as an example to illustrate the process.
+
 
 ## Define the question
 Breast cancer is the most common cancer amongst women in the world. It accounts for 25% of all cancer cases, and affects millions of people each and every year. It starts when cells in the breast begin to grow out of control. These cells usually form tumors that can be seen via X-ray or felt as lumps in the breast area.  The key challenge against its detection is how to classify tumors into malignant (cancerous) or benign(non cancerous).
@@ -199,6 +201,7 @@ Breast cancer is the most common cancer amongst women in the world. It accounts 
 Here we use Breast Cancer Wisconsin (Diagnostic) Dataset. It provides rich features describing tumors (radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, fractal dimension) from different angles(mean, standard deviation, and worst). Additionally it has preliminary diagnosis as M(alignant) or B(enign). So it’s adequate for modeling.
 
 Based on the dataset, we think it’s perfect to complete the analysis of these tumors using machine learning various classification algorithms.
+
 
 ## Tidy the data
 The dataset contains 569 records with 32 attributes.  These attributes’ name, non-null count, data type represented in the dataset are shown in the fig.
@@ -218,7 +221,8 @@ Furthermore we understand the distribution of Malignant vs. Benign graphed in fi
 
 Moreover we have an impression regarding both distribution of a single feature as well as its relationships with other features in fig.
 
-## Use the models in one shot** (RandomForestClassifier,  KNeighborsClassifier, GaussianNB,  SGDClassifier)
+
+## Use the models in one shot (RandomForestClassifier,  KNeighborsClassifier, GaussianNB,  SGDClassifier)
 10 data columns ending with _mean are selected as features, and the diagnosis column is selected as a label.
 
 StandardScaler is used to standardize X.
@@ -227,17 +231,19 @@ The dataset is split into training and testing data as 80% vs. 20%.
 
 In one shot, multiple models (RandomForestClassifier, KNeighborsClassifier, GaussianNB, SGDClassifier) are used.
 
+
 ## Perform the analysis
 In one shot again, all models are evaluated using accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix. Please see fig & fig.
+
 
 ## Check results
 All models’ overall scores are pretty high: 93%--96% while there’s no champion forever since data are shuffled for each and every run.
 
-## the dataset is from kaggle. While:
+## The dataset is from kaggle. While:
 I use different models.
 I use all models in one shot so that it’s code-efficient and it’s easy for model comparison. 
 
--------------------
+
 
 
 # Comparisons
@@ -313,5 +319,5 @@ Comparing all the models given their metrics, all the models performed somewhat 
 
 # References
 
-[Cardiovascular Disease Prediction Dataset](https://www.openml.org/search?type=data&status=active&id=43672)
+[Cardiovascular Disease Prediction Dataset](https://www.openml.org/search?type=data&status=active&id=43672) <br>
 [Breast Cancer Prediction Dataset](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)
