@@ -164,7 +164,7 @@ For this task a Artificial Neural Network model was trained, to classify patient
 ![image](https://user-images.githubusercontent.com/78277453/204981172-3f0473d3-f6c7-4eea-b023-88d9be20e2cf.png)
 
 
-The last recorded metrics are shown in table_ below.
+The last recorded metrics are shown in table below.
 |loss| acuracy |val loss | val accuracy |
 |-----|----|------|---------------------|
 | 0.4256|0.8271|0.3684|  0.8431 |
