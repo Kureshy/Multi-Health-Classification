@@ -101,14 +101,44 @@ By converting these numerical variables into categorical we get a clear picture 
 
 <br>
 All the attributes have a positive correlation with respect to the target variable Outcome which is depicted in the table below with Glucose having the highest correlation and BloodPressure the lowest.
+
+![image](https://user-images.githubusercontent.com/78277453/205763504-ccfebfbc-e5fe-431c-bbf0-05c78f833ea8.png)
+
 In the case of diabetes, especially the Glucose, BMI and Age variables of women are an important factor. The rate of diabetes may be higher in middle-aged women aged 45-65 years.
 <br>
 The following is the heat map which shows  the correlation of the features with each other. This image shows graphically how each feature correlates with each other feature. This analysis shows that the following features are positively correlated with the target variable [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction and Age].
 
+![image](https://user-images.githubusercontent.com/78277453/205763611-91e8a603-52cb-4190-9316-1c8e689111d8.png)
+
 
 The following pie chart  shows the number of people diagnosed and non diagnosed with diabetes.
 
+![image](https://user-images.githubusercontent.com/78277453/205763662-8dbc7b64-2fd8-4020-b719-f5ea640f6efd.png)
+
+
 Below are the distributions plots of each feature
+
+**Glucose Distribution Plot:**
+
+![image](https://user-images.githubusercontent.com/78277453/205763770-fd398942-ea0a-4215-99c9-bb9d19bda7b9.png)
+
+**BloodPressure Distribution Plot:**
+
+![image](https://user-images.githubusercontent.com/78277453/205764023-d082f130-429b-4f37-ba2a-762a5192f3b9.png)
+
+
+**Insulin Distribution Plot:**
+
+![image](https://user-images.githubusercontent.com/78277453/205764124-e0846c37-120c-4d63-9cde-60b85e551306.png)
+
+
+**Pregnancies Histogram Plot:**
+
+![image](https://user-images.githubusercontent.com/78277453/205764184-ad4e4256-8481-40f0-9558-d1b9975afde4.png)
+
+**Age Histogram Plot:**
+
+![image](https://user-images.githubusercontent.com/78277453/205764231-61e363b8-c1ea-4366-8982-612282de1e61.png)
 
 
 
