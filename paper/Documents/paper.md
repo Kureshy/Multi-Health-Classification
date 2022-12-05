@@ -140,7 +140,9 @@ Below are the distributions plots of each feature
 
 ![image](https://user-images.githubusercontent.com/78277453/205764231-61e363b8-c1ea-4366-8982-612282de1e61.png)
 
+**Pair plot:**
 
+![image](https://user-images.githubusercontent.com/78277453/205764428-86d346ff-b90b-48e3-8471-41cf02518a65.png)
 
 
 # Methods
