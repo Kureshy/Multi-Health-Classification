@@ -371,5 +371,5 @@ Comparing all the models given their metrics, all the models performed somewhat 
 # References
 
 [Cardiovascular Disease Prediction Dataset - OpenML](https://www.openml.org/search?type=data&status=active&id=43672) <br>
-[Breast Cancer Prediction Dataset](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)
+[Breast Cancer Prediction Dataset](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)<br>
 [Diabetes Dataset - OpenML](https://www.openml.org/search?type=data&status=active&id=42608)
