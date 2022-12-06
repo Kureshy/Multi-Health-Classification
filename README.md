@@ -366,6 +366,17 @@ Table: Classification Report for SVM model
 
 Comparing all the models given their metrics, all the models performed somewhat similarly but out of the three models the SVM model performed the best.
 
+# Conclusion
+
+Learning is possible considering the two step process, for at least finite hypothesis sets. Our Datasets and hypothesis sets are fixed, the data is assumed to be IID (Independent Identically Distributed) generated from a target distribution P[y|x], from this same distribution we obtain Independent test points for each dataset with respect to which we calculate Eout. This means that when we are considering the first step of the Two Step Learning approach i.e Eout(g) nearly equal to Ein, the testing and training points come from the same distribution. Next we ensure that the same error measure is used by the algorithm for selecting the best hypothesis as well as for when comparing "g" nearly equal to "f" that is Eout.<br>
+
+We understand that its not the question of choosing the most complicated hypothesis set, because a much smaller hypothesis set may very well be able to adapt to the problem (Optimal Tradeoff).<br>
+
+The fundamental Learning approach dictates that for a complex Target function we would need a larger set of Hypothesis and in order to maintain Eout nearly equal to Ein we would need a  larger set of data.<br>
+
+Our experiments are made up of complex datasets and incidentally their respective target functions are also complex, so the more the data our models has to train on would be beneficial. One major attribute of learning is the "Error", which is user defined and to measure error in our experiments we have used metrics like Classification report and Confusion matrices  to quantify the error of our trained models. This error effects how we select "g", our hypothesis.<br>
+
+Additionally we have implemented multiple models and compiled their Error metrics so that selection of a suitable model specific to the dataset, that outperforms others can be selected.<br>
 
 
 # References
