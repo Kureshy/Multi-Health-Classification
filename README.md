@@ -100,14 +100,15 @@ By converting these numerical variables into categorical we get a clear picture 
 - Pregnancies - Women with a very high pregnancy rate will have a higher incidence of diabetes on average.
 
 <br>
-**Correlation:**
+
+**Correlation:** <br>
 All the attributes have a positive correlation with respect to the target variable Outcome which is depicted in the table below with Glucose having the highest correlation and BloodPressure the lowest.
 
 ![image](https://user-images.githubusercontent.com/78277453/205763504-ccfebfbc-e5fe-431c-bbf0-05c78f833ea8.png)
 
 In the case of diabetes, especially the Glucose, BMI and Age variables of women are an important factor. The rate of diabetes may be higher in middle-aged women aged 45-65 years.
 <br>
-**Heat Map:**
+**Heat Map:** <br>
 The following is the heat map which shows  the correlation of the features with each other. This image shows graphically how each feature correlates with each other feature. This analysis shows that the following features are positively correlated with the target variable [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction and Age].
 
 ![image](https://user-images.githubusercontent.com/78277453/205763611-91e8a603-52cb-4190-9316-1c8e689111d8.png)
@@ -218,7 +219,7 @@ For this task a SVC model was trained, to classify patient cases as having the T
 
 - 8 data columns are selected as features and the target column (Outcome) is selected as the label.
 - Exploratory data analysis was conducted using the Seaborn library the results of which are summarized and displayed graphically in the introduction section.
-- The model was trained using a Support Vector Classifier and then Accuracy, Confusion Matrix and the Classification Report metrics were evaluated of both training and testing data.
+- The model was trained using a Support Vector Classifier and then Accuracy, Confusion Matrix and the Classification Report metrics were evaluated for both the training and testing data.
 
 
 
