@@ -100,12 +100,14 @@ By converting these numerical variables into categorical we get a clear picture 
 - Pregnancies - Women with a very high pregnancy rate will have a higher incidence of diabetes on average.
 
 <br>
+**Correlation:**
 All the attributes have a positive correlation with respect to the target variable Outcome which is depicted in the table below with Glucose having the highest correlation and BloodPressure the lowest.
 
 ![image](https://user-images.githubusercontent.com/78277453/205763504-ccfebfbc-e5fe-431c-bbf0-05c78f833ea8.png)
 
 In the case of diabetes, especially the Glucose, BMI and Age variables of women are an important factor. The rate of diabetes may be higher in middle-aged women aged 45-65 years.
 <br>
+**Heat Map:**
 The following is the heat map which shows  the correlation of the features with each other. This image shows graphically how each feature correlates with each other feature. This analysis shows that the following features are positively correlated with the target variable [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction and Age].
 
 ![image](https://user-images.githubusercontent.com/78277453/205763611-91e8a603-52cb-4190-9316-1c8e689111d8.png)
