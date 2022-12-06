@@ -287,12 +287,12 @@ In one shot again, all models are evaluated using accuracy_score, precision_scor
 
 
 ## Check results
-All models’ overall scores are pretty high: 93%--96% while there’s no champion forever since data are shuffled for each and every run.
+All models’ overall scores are pretty high: 93% - 96% while there’s no champion forever since data are shuffled for each and every run.
 
-## The dataset is from kaggle. While:
-I use different models.
+## Btw:
+I test RandomForestClassifier, KNeighborsClassifier, GaussianNB and SGDClassifieruse, together with LogisticRegression and SupportVectorMachine, all of them achieve 93% - 96%. I keep the former four while drop the latter two since others use them. 
 
-I use all models in one shot so that it’s code-efficient and it’s easy for model comparison. 
+I use the former four models in one shot so that it’s code-efficient and it’s easy for model comparison. 
 
 
 
@@ -371,5 +371,5 @@ Comparing all the models given their metrics, all the models performed somewhat 
 # References
 
 [Cardiovascular Disease Prediction Dataset - OpenML](https://www.openml.org/search?type=data&status=active&id=43672) <br>
-[Breast Cancer Prediction Dataset](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)<br>
+[Breast Cancer Prediction Dataset - OpenML](https://www.openml.org/search?type=data&status=active&id=1510)<br>
 [Diabetes Dataset - OpenML](https://www.openml.org/search?type=data&status=active&id=42608)
