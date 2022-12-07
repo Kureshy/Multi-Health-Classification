@@ -371,6 +371,58 @@ Table: Classification Report for SVM model
 
 Comparing all the models given their metrics, all the models performed somewhat similarly but out of the three models the SVM model performed the best.
 
+
+
+## Diabetes Classification
+
+Models used for the Diabetes data set are listed below:
+- Diabetes Classification Using Logistic Regression
+- Diabetes Classification Using Decision Tree Classification
+- Diabetes Classification Using SVM
+
+For easy comparison a table is shown below that compiles all the True Positive, False Positive, True Negative and False Negative values gathered from the confusion matrix for each model trained on the Diabetes dataset.
+
+The image of Confusion Matrix for each model is shown as below fig:
+
+
+| Model name | TP | FP | FN | TN |
+|---------- | --- | --- | ---| ----|
+| Logistic Regression       |132  |36 |14 |49|
+| Decision Tree    | 124 | 31 | 22 | 54 |
+| SVM | 132 | 35 | 14  | 50 |
+
+
+The classification report for each model trained on the Diabetes dataset is shown in the table with its respective label below.
+
+|     | Precision|   Recall |   F-1|
+|----  | --------  | --------- | ---- |
+| 0    | 0.79 |     0.90    |    0.84 |
+| 1    | 0.78  |    0.58  |      0.66|
+|accuracy |    |          |     0.78 |
+
+
+Table: Classification Report for Logistic Regression
+
+
+|    |  Precision |   Recall |   F-1 |
+| ---- | --------- |  --------- |---|
+|0 |    0.80 |    0.85 |     0.82 |
+|1 |    0.71 |       0.64 |      0.67 |
+|accuracy |             |       0.77 |
+
+Table: Classification Report for Decision Tree Classifier
+
+
+|      |Precision  | Recall  |  F-1 |
+| ----  |---------  |  ---------| ---- |
+|0  |  0.79 |         0.90  |    0.84 |
+| 1  |   0.78 |       0.59  |      0.67 |
+|accuracy |    |            |    0.79   |
+
+Table: Classification Report for SVM
+
+
+
 # Conclusion
 
 Learning is possible considering the two step process, for at least finite hypothesis sets. Our Datasets and hypothesis sets are fixed, the data is assumed to be IID (Independent Identically Distributed) generated from a target distribution P[y|x], from this same distribution we obtain Independent test points for each dataset with respect to which we calculate Eout. This means that when we are considering the first step of the Two Step Learning approach i.e Eout(g) nearly equal to Ein, the testing and training points come from the same distribution. Next we ensure that the same error measure is used by the algorithm for selecting the best hypothesis as well as for when comparing "g" nearly equal to "f" that is Eout.<br>
