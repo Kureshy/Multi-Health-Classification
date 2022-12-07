@@ -130,13 +130,14 @@ Several constraints were placed on the selection of these instances from a large
 There are only numerical variables in this dataset. 768 observations, and 9 variables(1 dependent) are available
 
 **Imputation:**
+
 Under normal circumstances, it seems that there are no missing values in the data set, but there may be missing values hidden in the data of the variables here.
 Then we examined the missing values of each variable according to the target variable. So we decided to apply different methods in order to fill na values according to the state of each variable because of the range differences of flag counts.
 For the variables {Glucose, Blood Pressure and BMI} we filled the missing values with median and for the remaining two variables {Insulin and SkinThickness} we filled them with the K Nearest Neighbours.
 
 **New Feature Interaction:**
 
-By converting these numerical variables into categorical we get a clear picture of the analysis of data.
+By converting the numerical variables into categorical we get a clear picture of the analysis of data.
 - Glucose - Women with hyperglycemia will have a higher incidence of diabetes on average the "Outcome".
 - Age - Middle-aged women will have a higher incidence of diabetes on average the "Outcome".
 - BMI - Morbidly obese women will have a higher incidence of diabetes on average the "Outcome".
