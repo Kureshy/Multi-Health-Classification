@@ -144,6 +144,7 @@ By converting these numerical variables into categorical we get a clear picture 
 - Insulin - Women with abnormal insulin will have a higher incidence of diabetes on average the "Outcome."
 - Pregnancies - Women with a very high pregnancy rate will have a higher incidence of diabetes on average.
 
+**Correlation:**
 
 All the attributes have a positive correlation with respect to the target variable Outcome which is depicted in fig-8 below with Glucose having the highest correlation and BloodPressure the lowest.
 
@@ -151,6 +152,7 @@ All the attributes have a positive correlation with respect to the target variab
 
 In the case of diabetes, especially the Glucose, BMI and Age variables of women are an important factor. The rate of diabetes may be higher in middle-aged women aged 45-65 years.
 
+**Heat Map:**
 
 The following is the heat map which shows  the correlation of the features with each other. This image shows graphically how each feature correlates with each other feature. This analysis shows that the following features are positively correlated with the target variable [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction and Age].
 
@@ -270,7 +272,7 @@ For this task a SVC model was trained, to classify patient cases as having the T
 
 - 8 data columns are selected as features and the target column (Outcome) is selected as the label.
 - Exploratory data analysis was conducted using the Seaborn library the results of which are summarized and displayed graphically in the introduction section.
-- The model was trained using a Support Vector Classifier and then Accuracy, Confusion Matrix and the Classification Report metrics were evaluated of both training and testing data.
+- The model was trained using a Support Vector Classifier and then Accuracy, Confusion Matrix and the Classification Report metrics were evaluated for both the training and testing data.
 
 \pagebreak
 
@@ -471,6 +473,7 @@ Table: Classification Report for Decision Tree Classifier
 |accuracy |    |            |    0.79 |   
 Table: Classification Report for SVM
 
+Comparing all the models given their metrics, all the models performed somewhat similarly but out of the three models the SVM model performed the best.
 
 # Conclusion
 
