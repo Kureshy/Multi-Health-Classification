@@ -1,10 +1,11 @@
 ---
 title: Performance analysis of  Machine Learning Models trained on life threatening Diseases
-date: "06 December 2021"
-author:
-        - Waqas Kureshy
-        - Neeharika Yeluri
-        - Jasmine Wang  
+date: "December 06, 2022"
+author: 
+	- Waqas Kureshy
+	- Neeharika Yeluri
+	- Jasmine Wang
+       
 
 
 header-includes: |
@@ -213,7 +214,7 @@ For this task a Artificial Neural Network model was trained, to classify patient
 - The neural network was trained for 600 epochs , but the training was stopped at 85 epochs due to the early stop callback.
 - The model’s metrics showing the model’s Loss, Validation-Loss, Accuracy and Validation-Accuracy are shown in the fig-17 below.
 
-![Performance Metrics of ANN](https://user-images.githubusercontent.com/78277453/204981172-3f0473d3-f6c7-4eea-b023-88d9be20e2cf.png)
+![Performance Metrics of ANN](https://user-images.githubusercontent.com/78277453/204981172-3f0473d3-f6c7-4eea-b023-88d9be20e2cf.png){height=250px}
 
 
 The last recorded metrics are shown in table below.
@@ -284,12 +285,11 @@ Here we use Breast Cancer Wisconsin (Diagnostic) Dataset. It provides rich featu
 
 Based on the dataset, we think it’s perfect to complete the analysis of these tumors using machine learning various classification algorithms.
 
-\pagebreak
 
 ## Tidy the data
 The dataset contains 569 records with 32 attributes.  These attributes’ name, non-null count, data type represented in the dataset are shown in fig-18.
 
-![Breast Cancer Dataset attributes](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.info.png?raw=true){height=400px}
+![Breast Cancer Dataset attributes](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.info.png?raw=true)
 
 \pagebreak
 
@@ -301,32 +301,36 @@ We eliminate the  _worst features since these extreme features don’t represent
 
 Now we have the mean features together with the diagonal feature for further analysis. We can take a closer look at these features as well as from a statistical point of view, showing in fig-20.
 
-![Data statistics](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.describe.png?raw=true){height=150px}
+![Data statistics](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.describe.png?raw=true)
 
 \pagebreak
 
-A heatmap showing the correlation of the features with each other is shown in fig.  The image shows graphically how each feature correlates with each other feature. This analysis shows that the following features [‘radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean', 'concave points_mean', 'symmetry_mean', 'fractal_dimension_mean] are positively correlated with the target variable[diagnosis] , with[‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] showing the highest correlation.
-
+A heatmap showing the correlation of the features with each other is shown in fig-21.  The image shows graphically how each feature correlates with each other feature. This analysis shows that the following features [‘radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean', 'smoothness_mean', 'compactness_mean', 'concavity_mean', 'concave points_mean', 'symmetry_mean', 'fractal_dimension_mean] are positively correlated with the target variable[diagnosis] , with[‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] showing the highest correlation. 
 
 ![Heatmap](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.heatmap.png?raw=true)
 
-The above is proved by fig-21. showing indeed [‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] are major contributors to diagnosis.
-
-![Major Contributions to the diagnosois](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.major_contributors.png?raw=true){ height=300px }
-
-Furthermore we understand the distribution of Malignant vs. Benign graphed in fig-23.
-
-![Distribution of Breast cancer dataset](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.counts.png?raw=true){ height=250px }
 
 \pagebreak
+The above is proved by fig-22. showing indeed [‘radius_mean’, ‘perimeter_mean’, ‘area_mean’, ‘concave points_mean', ‘concavity_mean'] are major contributors to diagnosis.
 
+![Major Contributions to the diagnosois](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.major_contributors.png?raw=true){height=400px}
+
+\pagebreak
+Furthermore we understand the distribution of Malignant vs. Benign graphed in fig-23. 
+
+![Distribution of Breast cancer dataset](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.counts.png?raw=true){height=400px}
+
+
+\pagebreak
 Moreover we have an impression regarding both distribution of a single feature as well as its relationships with other features in fig-24.
 
 ![Pairplot of data](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.pairplot.png?raw=true){height=800px}
 
-\pagebreak
 
+\pagebreak
+\pagebreak
 ## Use the models in one shot (RandomForestClassifier,  KNeighborsClassifier, GaussianNB,  SGDClassifier)
+
 10 data columns ending with _mean are selected as features, and the diagnosis column is selected as a label.
 
 StandardScaler is used to standardize X.
@@ -339,9 +343,9 @@ In one shot, multiple models (RandomForestClassifier, KNeighborsClassifier, Gaus
 ## Perform the analysis
 In one shot again, all models are evaluated using accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix. Please see fig-25 & fig-26.
 
-![Performance Metrics Breast Cancer Dataset](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.metrics1.png?raw=true){height=300px}
+![Performance Metrics Breast Cancer Dataset](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.metrics1.png?raw=true)
 
-![Performance Metrics Breast Cancer Dataset](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.metrics2.png?raw=true){height=500px}
+![Performance Metrics Breast Cancer Dataset](https://github.com/Kureshy/Multi-Health-Classification/blob/main/paper/Images/ds.metrics2.png?raw=true)
 
 \pagebreak
 
