@@ -420,7 +420,7 @@ Table: Classification Report for Decision Tree Classifier
 
 Table: Classification Report for SVM
 
-
+Comparing all the models given their metrics, all the models performed somewhat similarly but out of the three models the SVM model performed the best.
 
 # Conclusion
 
