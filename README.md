@@ -304,7 +304,6 @@ I use the former four models in one shot so that it’s code-efficient and it’
 
 # Comparisons
 
-# Conclusions
 In this section we compile and compare the various Evaluation metrics of each and every model.
 
 ## CVD (Cardiovascular Disease) Classification
